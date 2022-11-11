@@ -1,7 +1,7 @@
 ---
 description: >-
   Récuperer et manipuler des éléments provenance de la requête HTTP du client
-  (utilisateur ou navigateur)
+  (utilisateur et/ou navigateur)
 ---
 
 # Manipulation des Requêtes
@@ -17,14 +17,14 @@ description: >-
 
 
 
-La manipulation des Requêtes requiert le passage en paramètre d'un Controller, un Objet de type Request cette méthode est appelée une **injection de dépendance**. \
+La manipulation des Requêtes requiert le passage en paramètre d'une Méthode, un Objet de type Request. _Cette façon de faire est appelée une **injection de dépendance**._ \
 Il faut alors importer la [Class Request](https://github.com/symfony/symfony/blob/6.1/src/Symfony/Component/HttpFoundation/Request.php) native de Symfony qui permet d'exploiter les requêtes en ajoutant cette ligne :&#x20;
 
 ```php
 use Symfony\Component\HttpFoundation\Request;
 ```
 
-Ensuite, la syntaxe est la suivante :&#x20;
+Ensuite, pour passer le paramètre à la Méthode la syntaxe est la suivante :&#x20;
 
 ```php
 public function nomFonction(Request $request)

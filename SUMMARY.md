@@ -1,10 +1,11 @@
 # Table of contents
 
-* [Les concepts clés](README.md)
+* [Découverte de Symfony](README.md)
+* [Les concepts clés](<README (1).md>)
 
-## Mode opératoire
+## Modes opératoires
 
-* [Création du projet](mode-operatoire/creation-du-projet.md)
+* [Création du projet](modes-operatoires/creation-du-projet.md)
 
 ## Controller
 
