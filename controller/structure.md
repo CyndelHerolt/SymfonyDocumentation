@@ -7,13 +7,15 @@ Un Contoller doit être construit en suivant une structure définie.&#x20;
 2. Importer les Class à exploiter : \
    &#x20;<mark style="color:red;">**`use`**</mark>`Chemin\Menant\A\La\Class`
 3. Le contenu executé lors de l'appel du Controller doit se trouver dans une Class qui doit porter le même nom que le Controller : \
-   &#x20;<mark style="color:red;">`class`</mark><mark style="color:orange;">`NomController { }`</mark>
+   &#x20;<mark style="color:red;">`class`</mark><mark style="color:orange;">`NomController`</mark>` ``{ ... }`
 4. Dans cette Class, initialiser la Route grace à cet attribut : \
    &#x20;`#[`<mark style="color:purple;">`Route`</mark>`(`<mark style="color:blue;">`'/'`</mark>`, name:`<mark style="color:blue;">`'app_name'`</mark>`)]`
-5. Et on rédige la fonction qui sera executée à l'appel du Controller en spécifiant l'objet Response si nécessaire : \
-   <mark style="color:red;">`public function`</mark><mark style="color:purple;">`nomFonction`</mark>`(`<mark style="color:blue;">`$parametres`</mark>`):`<mark style="color:orange;">`Response`</mark>`{ }`
+5. Et on rédige la fonction qui sera executée à l'appel du Controller en spécifiant l'objet Response : \
+   <mark style="color:red;">`public function`</mark><mark style="color:purple;">`nomFonction`</mark>`(`<mark style="color:blue;">`$parametres`</mark>`):`<mark style="color:orange;">`Response`</mark>`{ ... }`
+6. Récupérer la valeur de retour de la fonction pour la traiter ailleurs : \
+   <mark style="color:red;">`return`</mark>`( ... )`
 
-Ici un Controller permettant de générer un nombre aléatoire.
+**Exemple :** Ici un Controller permettant de générer un nombre aléatoire.
 
 {% code title="/src/Controller/LuckyController.php" overflow="wrap" lineNumbers="true" %}
 ```php

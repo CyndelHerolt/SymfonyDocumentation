@@ -16,7 +16,7 @@ C'est une fonction PHP qui récupère l'information depuis l'objet Request d'une
 
 Dans le cas idéal, le Controller doit contenir le minimum de code possible (20 lignes maximum selon les standards de Symfony). Il ne doit que faire le lien entre les différents éléments de l'application et une réponse.
 
-Le Controller contient des méthodes, chacune, en générale, associée à une route.
+Le Controller contient des méthodes, chacune, en général, associée à une route.
 
 Il est indispensable de lier le Controller à une route, sans quoi il sera impossible de l'exploiter.
 
