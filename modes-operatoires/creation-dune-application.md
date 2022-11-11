@@ -1,4 +1,4 @@
-# Création du projet
+# Création d'une application
 
 ### Conditions nécessaires
 

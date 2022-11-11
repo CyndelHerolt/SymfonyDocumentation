@@ -4,7 +4,7 @@
 
 <mark style="color:yellow;">**Objets :**</mark> un objet est un bloc de code mêlant des variables et des fonctions, appelées respectivement attributs et méthodes.
 
-<mark style="color:yellow;">**Attributs :**</mark>** l**es attributs définissent les caractéristiques d’un objet d’une classe.
+<mark style="color:yellow;">**Attributs :**</mark>** l**es attributs définissent les caractéristiques d’un objet d’une classe.&#x20;
 
 <mark style="color:yellow;">**Méthodes :**</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;"></mark> les méthodes définissent les fonctions propres aux instances d’une classe.
 
@@ -17,5 +17,5 @@
 ****Mise en page visuelle des données créées (page web, fichier pdf...).  C'est lui qui apporte la réponse (**response/render**) au visiteur.\
 **C: Controller**\
 ****Réception et exploitation des Requêtes, des données client. Transmission des données à la vue.\
-<img src=".gitbook/assets/image (1).png" alt="" data-size="original">
+<img src="../.gitbook/assets/image.png" alt="" data-size="original">
 
