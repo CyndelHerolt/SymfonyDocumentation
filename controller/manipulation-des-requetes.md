@@ -17,7 +17,7 @@ description: >-
 
 
 
-La manipulation des Requêtes requiert le passage en paramètre d'un Controller, un Objet de type Request => injection de dépendance. \
+La manipulation des Requêtes requiert le passage en paramètre d'un Controller, un Objet de type Request cette méthode est appelée une **injection de dépendance**. \
 Il faut alors importer la [Class Request](https://github.com/symfony/symfony/blob/6.1/src/Symfony/Component/HttpFoundation/Request.php) native de Symfony qui permet d'exploiter les requêtes en ajoutant cette ligne :&#x20;
 
 ```php
@@ -73,5 +73,25 @@ public function nomFonction(Request $request)
 
 ### Les Requêtes dans les Routes
 
-Les [routes dynamiques](../routes/routes-dynamiques.md) permettent d'exploiter des paramètres
+Les [routes dynamiques](../routes/routes-dynamiques.md) permettent de générer des requêtes en passant par l'URL. Il suffit alors de passer les informations en paramètres de la fonction dans le Controller. On peut alors éxecuter un code différent en fonction de l'information passée par l'URL.
+
+Exemple : Moduler le titre <`h1>` d'une page en fonction de l'URL
+
+```php
+// src/Controller/ColorController
+Class ColorController extends AbstractController {
+    #[Route('/color/{color}', name: 'app_color2')]
+        public function colorBlue($color): Response
+        {
+
+        return $this->render('color.html.twig', [
+            'color' => $color;
+        ]);
+    }
+}
+
+
+```
+
+Pour récupérer la variable dans le controller, il suffit de déclarer une variable dans la méthode avec le même nom que la variable d'url.
 
