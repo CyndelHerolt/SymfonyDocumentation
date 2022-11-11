@@ -73,25 +73,36 @@ public function nomFonction(Request $request)
 
 ### Les Requêtes dans les Routes
 
-Les [routes dynamiques](../routes/routes-dynamiques.md) permettent de générer des requêtes en passant par l'URL. Il suffit alors de passer les informations en paramètres de la fonction dans le Controller. On peut alors éxecuter un code différent en fonction de l'information passée par l'URL.
+Les [routes dynamiques](../routes/routes-dynamiques.md) permettent de générer des requêtes en passant par l'URL. Pour exploiter ce type de Requête dans le Controller, il suffit d'intialiser la variable dans la route  et de la passer comme paramètre de la fonction. On peut ensuite agir sur cette variable et la récupérer dans le return. Cela permet la l'écriture d'un code dynamique, modulé en fonction de l'information passée par l'URL.
 
-Exemple : Moduler le titre <`h1>` d'une page en fonction de l'URL
+Exemple : Moduler le titre <mark style="color:blue;">`<h1>`</mark> d'une page en fonction de l'URL
 
+{% code overflow="wrap" %}
 ```php
-// src/Controller/ColorController
+// /src/Controller/ColorController
 Class ColorController extends AbstractController {
-    #[Route('/color/{color}', name: 'app_color2')]
+//on passe le paramètre color à la route
+    #[Route('/color/{color}', name: 'app_color')]
+//on passe le paramètre color à la fonction
         public function colorBlue($color): Response
         {
-
+//on retourne la vue 'color.html.twig' dans laquelle on pourra appeler la variable $color sous cette forme: {{ colorTitre }}
         return $this->render('color.html.twig', [
-            'color' => $color;
+            'colorTitre' => $color;
         ]);
     }
 }
-
-
 ```
+{% endcode %}
 
-Pour récupérer la variable dans le controller, il suffit de déclarer une variable dans la méthode avec le même nom que la variable d'url.
+```php
+// /templates/color.html.twig
+{% raw %}
+{% extends 'base.html.twig' %}
+{% block body %}
+//on récupère la variable $color
+        <h1>{{ colorTitre }}</h1>
+{% endblock %}
+{% endraw %}
+```
 
