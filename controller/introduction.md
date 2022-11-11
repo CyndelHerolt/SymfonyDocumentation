@@ -1,3 +1,10 @@
+---
+description: >-
+  Le Controller est une Class qui contient différentes méthodes. Chaque méthode
+  correspond à une route particulière et retourne une vue ou des données, entre
+  autres.
+---
+
 # Introduction
 
 ### Quelle fonction pour le controller ?
@@ -11,7 +18,7 @@ Dans le cas idéal, le Controller doit contenir le minimum de code possible (20 
 
 Le Controller contient des méthodes, chacune, en générale, associée à une route.
 
-Il est indispensable de lier le Controller à une route, sans quoi il sera impossible de l'appeler.
+Il est indispensable de lier le Controller à une route, sans quoi il sera impossible de l'exploiter.
 
 Le dossier /src contient la totalité des Controllers, organisés dans des sous-dossiers.
 

@@ -1,14 +1,11 @@
-# Introduction
+# Les concepts clés
 
-En programmation informatique, un framework ou structure logicielle est un ensemble cohérent de composants logiciels structurels, qui sert à créer les fondations ainsi que les grandes lignes de tout ou d’une partie d’un logiciel (architecture).\
-Un framework peut à ce titre être constitué de plusieurs bibliothèques chacune spécialisée dans un domaine. Un framework peut néanmoins être spécialisé, sur un langage particulier, une plateforme spécifique, un domaine particulier : reporting, mapping, etc. ;
+<mark style="color:yellow;">**Class :**</mark> une classe est un ensemble de code contenant des variables et des fonctions permettant de créer des objets. Une classe peut contenir plusieurs objets.&#x20;
 
-Le cadre de travail (traduction littérale de l’anglais : framework) qu’il impose de par sa construction même, guidant l’architecture logicielle voire conduisant le développeur à respecter certains patterns (modèle de conception) ; les bibliothèques le constituant sont alors organisées selon le même paradigme.
+<mark style="color:yellow;">**Objets :**</mark> un objet est un bloc de code mêlant des variables et des fonctions, appelées respectivement attributs et méthodes.
 
-### Qu'est ce que c'est ?
+<mark style="color:yellow;">**Attributs :**</mark>** l**es attributs définissent les caractéristiques d’un objet d’une classe.
 
-* Framework MVC en PHP 5 (V2), PHP 7 (V3, V4 et V5 ), PHP8 (V6) libre
-* Développé en 2005 par la société Sensio pour répondre à ses besoins
-* Division de la société Sensio en deux entités l’agence Web et l’entreprise qui soutient et maintient Symfony : SensioLabs, dirigée par Fabien Potencier, l’auteur de Symfony
-* Framework français !, De renommée mondiale
-* Premier framework en France et en Europe
+<mark style="color:yellow;">**Méthodes :**</mark> <mark style="color:yellow;"></mark><mark style="color:yellow;"></mark> les méthodes définissent les fonctions propres aux instances d’une classe.
+
+<mark style="color:yellow;">**Return :**</mark> return signifie qu’on va renvoyer une valeur, pour pouvoir la récupérer ensuite et la stocker dans une variable par exemple. Cette instruction arrête le déroulement de la fonction, le code situé après le return ne s’exécutera pas.

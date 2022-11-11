@@ -1,17 +1,21 @@
 # Table of contents
 
-* [Introduction](README.md)
-* [Les concepts clés](les-concepts-cles.md)
+* [Les concepts clés](README.md)
 
-## Modèles
+## Mode opératoire
 
-* [Page 2](modeles/page-2.md)
+* [Création du projet](mode-operatoire/creation-du-projet.md)
 
 ## Controller
 
 * [Introduction](controller/introduction.md)
 * [Structure](controller/structure.md)
+* [Page 1](controller/page-1.md)
 
 ## Vues
 
 * [Page 3](vues/page-3.md)
+
+## Database
+
+* [Page 2](database/page-2.md)
