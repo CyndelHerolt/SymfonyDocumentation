@@ -15,6 +15,8 @@ description: >-
 * Le serveur envoie la <mark style="color:yellow;">**Response**</mark> au navigateur
 * Le navigateur partage la **Ressource** à l'utilisateur
 
+La Response est l'objet fondamental pour Symfony. Un controller doit systématiquement retourner un objet Response.
+
 Il existe plusieurs types de Response => JsonResponse, RedirectResponse, HttpResponse, BinaryFileResponse...\
 La plus utilisée est Response.\
 Afin de l'exploiter, il est nécessaire d'intégrer la [Class Response](https://github.com/symfony/symfony/blob/6.1/src/Symfony/Component/HttpFoundation/Response.php) native de Symfony qui permet d'exploiter les requêtes en ajoutant cette ligne :&#x20;
@@ -28,14 +30,30 @@ _Dans l'état cette réponse n'est pas du HTML car rien n'est précisé dans ce 
 
 {% code overflow="wrap" %}
 ```php
-public function nomFonction() {
+//Ajout du type Response à la fonction
+public function nomFonction(): Response {
     //On initialise la chaine de caractères 'Ma Response' comme contenu de l'objet Response
     return new Response('Ma Response');
 }
 ```
 {% endcode %}
 
+Il est possible de retourner toutes sortes de données dans la Response (JSON, array, string, variables...).&#x20;
 
+Dans l'exemple ci-dessous, on retourne une méthode [<mark style="color:purple;">`render()`</mark>](#user-content-fn-1)[^1] qui permet au Controller de récupérer une Vue et d'en afficher le contenu. \
+On passe alors à la méthode des paramètres qui constituent le contenu de la Response.\
+Ici on va récupérer le Template `templates/default/index.html.twig` et y affecter la variable `$variable`.
+
+```php
+public function index() 
+{
+    // votre code
+
+    return $this->render('default/index.html.twig', 
+        ['variable' => $variable]
+    );
+}
+```
 
 ### En théorie
 
@@ -63,3 +81,6 @@ $response->headers->set('Content-Type', 'text/plain');
 $response->setStatusCode(Response::HTTP_NOT_FOUND);
 ```
 
+
+
+[^1]: La méthode render est définie dans la Class AbstractController qui est native à Symfony et dont le Controller doit hériter.
