@@ -9,9 +9,9 @@ description: >-
 ### Méthode de traitement des requêtes par Symfony
 
 * L'utilisateur demande une **Ressource** au navigateur
-* Ce dernier envoie une **Requête** au serveur
-* Symfony execute l'objet **Request** en question dans l'application
-* L'application récupère l'objet **Response** généré par l'execution de l'objet **Request**
+* Ce dernier envoie une <mark style="color:yellow;">**Requête**</mark> au serveur
+* Symfony execute l'objet <mark style="color:yellow;">**Request**</mark> en question dans l'application
+* L'application récupère l'objet **Response** généré par l'execution de l'objet <mark style="color:yellow;">**Request**</mark>
 * Le serveur envoie la **Response** au navigateur
 * Le navigateur partage la **Ressource** à l'utilisateur
 
@@ -73,7 +73,7 @@ public function nomFonction(Request $request)
 
 ### Les Requêtes dans les Routes
 
-Les [routes dynamiques](../routes/routes-dynamiques.md) permettent de générer des requêtes en passant par l'URL. Pour exploiter ce type de Requête dans le Controller, il suffit d'intialiser la variable dans la route  et de la passer comme paramètre de la fonction. On peut ensuite agir sur cette variable et la récupérer dans le return. Cela permet la l'écriture d'un code dynamique, modulé en fonction de l'information passée par l'URL.
+Les [routes dynamiques](../routes/routes-dynamiques.md) permettent de générer des requêtes en passant par l'URL. Pour exploiter ce type de Requête dans le Controller, il suffit d'initialiser la variable dans la route  et de la passer comme paramètre de la fonction. On peut ensuite agir sur cette variable et la récupérer dans le return. Cela permet l'écriture d'un code dynamique, modulé en fonction de l'information passée par l'URL.
 
 Exemple : Moduler le titre <mark style="color:blue;">`<h1>`</mark> d'une page en fonction de l'URL
 
@@ -105,4 +105,6 @@ Class ColorController extends AbstractController {
 {% endblock %}
 {% endraw %}
 ```
+
+Résultat : Si l'on accède à l'URL <mark style="color:blue;">`/color/blue`</mark>, le titre de la page sera "blue". (on pourrait également appeler la variable $color dans un bloc de style afin que le titre soit d'une couleur équivalente à la variable $color.
 
