@@ -31,7 +31,8 @@ _Dans l'état cette réponse n'est pas du HTML car rien n'est précisé dans ce 
 {% code overflow="wrap" %}
 ```php
 //Ajout du type Response à la fonction
-public function nomFonction(): Response {
+public function nomFonction(): Response 
+{
     //On initialise la chaine de caractères 'Ma Response' comme contenu de l'objet Response
     return new Response('Ma Response');
 }
@@ -41,19 +42,20 @@ public function nomFonction(): Response {
 Il est possible de retourner toutes sortes de données dans la Response (JSON, array, string, variables...).&#x20;
 
 Dans l'exemple ci-dessous, on retourne une méthode [<mark style="color:purple;">`render()`</mark>](#user-content-fn-1)[^1] qui permet au Controller de récupérer une Vue et d'en afficher le contenu. \
-On passe alors à la méthode des paramètres qui constituent le contenu de la Response.\
-Ici on va récupérer le Template `templates/default/index.html.twig` et y affecter la variable `$variable`.
+On passe alors à la méthode des paramètres qui constituent le contenu de la Response.
 
+{% code overflow="wrap" %}
 ```php
-public function index() 
+public function index(): Response
 {
-    // votre code
-
+    $maResponse = 'Ma Response';
+//récupération du Template et affectation de la variable $maResponse qui pourra être invoquée dans le template de cette façon {{ variable }}.
     return $this->render('default/index.html.twig', 
-        ['variable' => $variable]
+        ['variable' => $maResponse]
     );
 }
 ```
+{% endcode %}
 
 ### En théorie
 
