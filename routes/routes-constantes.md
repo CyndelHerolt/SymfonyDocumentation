@@ -30,3 +30,17 @@ Par exemple `/monURL/123` , `/monURL/456` sont deux URL différentes qui enclenc
 
 Cette variable peut être exploitée dans le Controller, il suffit de déclarer en tant que paramètre de la Methode une variable avec le même nom que la variable d'url.\
 Ici on affichera simplement le contenu de la variable.
+
+Il est possible de cumuler plusieurs variables d'URL.
+
+{% code overflow="wrap" %}
+```php
+#[Route('/monURL/{id}/{prenom}', name:'nom_de_la_Route')]
+public function nomFonction($id, $prenom)
+{
+    echo $id.' '.$prenom;
+}
+```
+{% endcode %}
+
+On pourrait utiliser un autre séparation que le slash, comme par exemple <mark style="color:yellow;">-</mark>, <mark style="color:yellow;">.</mark> ou <mark style="color:yellow;">\_</mark>. La seule condition étant que Symfony puisse être en mesure de différencier les paramètres.
