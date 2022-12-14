@@ -11,7 +11,7 @@ description: >-
 ### Quelle fonction pour la Vue ?
 
 Elle définit ce que l'utilisateur voit lorsqu'il accède à une page web gérée par l'application. Elle est généralement écrite en HTML mais peut également utiliser d'autres langages comme le XML ou le JSON.\
-En exploitant les Controller et les Model, la Vue récupère les données nécessaires pour afficher la page Web et les incorpore au bon endroit dans le code HTML.
+En lien avec les Controller et les Model, la Vue récupère les données nécessaires pour afficher la page Web et les incorpore au bon endroit dans le code HTML.
 
 Dans Symfony la Vue - ou Template - est généré avec un moteur de rendu de template : <mark style="color:yellow;">**TWIG**</mark>.
 
@@ -26,3 +26,10 @@ La syntaxe Twig est basée sur trois constructions :&#x20;
 * <mark style="color:yellow;">**\{{**</mark>** ... **<mark style="color:yellow;">**\}}**</mark> => permet d'afficher le contenu d'une variable <mark style="color:red;">( ou le résultat de l'évaluation d'une expression ??? )</mark>
 * <mark style="color:yellow;">**\{%**</mark>** ... **<mark style="color:yellow;">**%\}**</mark> => permet d'éxecuter une logique (une condition ou une boucle).
 * <mark style="color:yellow;">**{#**</mark> ... <mark style="color:yellow;">**#}**</mark> => permet d'ajouter des commentaires au Model (contrairement aux commentaires HTML, ces commentaires ne sont pas inclus dans la page rendue).
+
+Le lien entre le Controller et la Vue est déclaré dans la Route.
+
+{% hint style="danger" %}
+Il n'est pas possible d'exécuter du code PHP dans les Vues Twig. Mais il fournit les outils permettant d'exécuter certaines logiques.
+{% endhint %}
+

@@ -24,7 +24,8 @@
 
 ## Vues - Templates
 
-* [Introduction](vues-templates/introduction.md)
+* [Introduction](vues/wip.md)
+* [Fonctionnalités de TWIG](vues-templates/fonctionnalites-de-twig.md)
 
 ## Database
 
