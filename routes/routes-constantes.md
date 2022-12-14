@@ -25,4 +25,8 @@ public function nomFonction($id): Response
 }
 ```
 
-Dans l'exemple ci-dessus,&#x20;
+Dans l'exemple ci-dessus, 'id' entouré de { } est une variable dynamique qui accèpte tous les caractères alphanumériques. \
+Par exemple `/monURL/123` , `/monURL/456` sont deux URL différentes qui enclencheront lors de leur Request, la Méthode de Class à laquelle `/monURL/{id}` est liée.
+
+Cette variable peut être exploitée dans le Controller, il suffit de déclarer en tant que paramètre de la Methode une variable avec le même nom que la variable d'url.\
+Ici on affichera simplement le contenu de la variable.
