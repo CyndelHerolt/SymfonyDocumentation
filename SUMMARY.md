@@ -22,9 +22,9 @@
 * [Manipulation des Routes](routes/creation-de-routes-en-tant-quattributs.md)
 * [Routes constantes et dynamiques](routes/routes-constantes.md)
 
-## Vues
+## Vues - Templates
 
-* [WIP](vues/wip.md)
+* [Introduction](vues-templates/introduction.md)
 
 ## Database
 
