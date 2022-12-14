@@ -13,11 +13,11 @@
 <mark style="color:yellow;">**Return :**</mark> return signifie qu’on va renvoyer une valeur, pour pouvoir la récupérer ensuite et la stocker dans une variable par exemple. Cette instruction arrête le déroulement de la fonction, le code situé après le return ne s’exécutera pas.
 
 <mark style="color:yellow;">**MVC :**</mark> Symfony permet la mise en place d’un principe basé sur le contrôle de vue de modèle (Model View Controller, ou MVC).\
-**M: Model**\
+**M: **<mark style="color:yellow;">**Model**</mark>\
 ****Récupération et préparation des données et fonctionnalités principales pour l'exploitation. \
-**V: View**\
+**V: **<mark style="color:yellow;">**View**</mark>\
 ****Mise en page visuelle des données créées (page web, fichier pdf...).  C'est lui qui apporte la réponse (**response/render**) au visiteur.\
-**C: Controller**\
+**C: **<mark style="color:yellow;">**Controller**</mark>\
 ****Réception et exploitation des Requêtes, des données client. Transmission des données à la vue.
 
 <figure><img src="../.gitbook/assets/MVC (1).png" alt="schèma du modèle MVC"><figcaption><p>Schéma du principe de MVC</p></figcaption></figure>
