@@ -73,7 +73,7 @@ public function nomFonction(Request $request)
 
 ### Les Requêtes dans les Routes
 
-Les [routes dynamiques](broken-reference) permettent de générer des requêtes en passant par l'URL. Pour exploiter ce type de Requête dans le Controller, il suffit d'initialiser la variable dans la route  et de la passer comme paramètre de la fonction. On peut ensuite agir sur cette variable et la récupérer dans le return. Cela permet l'écriture d'un code dynamique, modulé en fonction de l'information passée par l'URL.
+Les [routes dynamiques](../routes/routes-dynamiques.md) permettent de générer des requêtes en passant par l'URL. Pour exploiter ce type de Requête dans le Controller, il suffit d'initialiser la variable dans la route  et de la passer comme paramètre de la fonction. On peut ensuite agir sur cette variable et la récupérer dans le return. Cela permet l'écriture d'un code dynamique, modulé en fonction de l'information passée par l'URL.
 
 Exemple : Moduler le titre <mark style="color:blue;">`<h1>`</mark> d'une page en fonction de l'URL
 
