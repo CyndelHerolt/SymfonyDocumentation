@@ -18,6 +18,7 @@
 
 ## Routes
 
+* [Introduction](routes/introduction.md)
 * [Routes constantes](routes/routes-constantes.md)
 * [Routes dynamiques](routes/routes-dynamiques.md)
 
@@ -36,3 +37,7 @@
 ## Mail
 
 * [WIP](mail/wip.md)
+
+## STIMULUS
+
+* [WIP](stimulus/wip.md)

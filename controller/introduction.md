@@ -7,7 +7,7 @@ description: >-
 
 # Introduction
 
-### Quelle fonction pour le controller ?
+### Quelle fonction pour le Controller ?
 
 Recevoir les données entrées par l'utilisateur et communiquer les changements aux[ modèles](broken-reference) mais également communiquer avec les [modèles](broken-reference) pour obtenir des informations qu'il pourra ensuite transférer aux [vues](broken-reference).\
 C'est une fonction PHP qui récupère l'information depuis l'objet Request d'une requête HTTP, puis crée et retourne une réponse HTTP (un objet Response Symfony). La réponse peut être une page HTML, un document XML un tableau JSON, une image, une redirection, une erreur 404, ou n'importe quoi d'autre.
