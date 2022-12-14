@@ -59,7 +59,7 @@ public function index(): Response
 
 ### En théorie
 
-La Reponse peut contenir jusqu'à trois arguments : le contenu de la Reponse, le status code et un tableau d'en-têtes HTTP.
+La Reponse peut contenir jusqu'à trois arguments : le contenu de la Response, le status code et un tableau d'en-têtes HTTP.
 
 Pour définir les trois arguments, la syntaxe est la suivante :
 
@@ -74,6 +74,7 @@ $response = new Response(
 
 Les arguments peuvent être manipulés après la création de la Reponse :&#x20;
 
+{% code overflow="wrap" %}
 ```php
 $response->setContent('Hello World');
 
@@ -82,6 +83,7 @@ $response->headers->set('Content-Type', 'text/plain');
 
 $response->setStatusCode(Response::HTTP_NOT_FOUND);
 ```
+{% endcode %}
 
 
 

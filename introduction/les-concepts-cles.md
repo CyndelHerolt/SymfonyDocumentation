@@ -16,6 +16,7 @@
 **V: View**\
 ****Mise en page visuelle des données créées (page web, fichier pdf...).  C'est lui qui apporte la réponse (**response/render**) au visiteur.\
 **C: Controller**\
-****Réception et exploitation des Requêtes, des données client. Transmission des données à la vue.\
-<img src="../.gitbook/assets/image.png" alt="" data-size="original">
+****Réception et exploitation des Requêtes, des données client. Transmission des données à la vue.
+
+<figure><img src="../.gitbook/assets/MVC (1).png" alt="schèma du modèle MVC"><figcaption><p>Schéma du principe de MVC</p></figcaption></figure>
 
