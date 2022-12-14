@@ -1,4 +1,0 @@
-# Routes dynamiques
-
-## WIP
-

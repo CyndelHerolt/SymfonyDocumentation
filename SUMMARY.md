@@ -19,9 +19,8 @@
 ## Routes
 
 * [Introduction](routes/introduction.md)
-* [Création de routes en tant qu'Attributs](routes/creation-de-routes-en-tant-quattributs.md)
-* [Routes constantes](routes/routes-constantes.md)
-* [Routes dynamiques](routes/routes-dynamiques.md)
+* [Manipulation des Routes](routes/manipulation-des-routes.md)
+* [Routes constantes et dynamiques](routes/routes-constantes-et-dynamiques.md)
 
 ## Vues
 

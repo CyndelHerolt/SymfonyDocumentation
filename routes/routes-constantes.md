@@ -1,4 +1,0 @@
-# Routes constantes
-
-## WIP
-
