@@ -25,7 +25,10 @@
 ## Vues - Templates
 
 * [Introduction](vues/wip.md)
-* [Fonctionnalités de TWIG](vues-templates/fonctionnalites-de-twig.md)
+* [Fonctionnalités de TWIG](vues-templates/fonctionnalites-de-twig/README.md)
+  * [Logique](vues-templates/fonctionnalites-de-twig/logique.md)
+  * [Variables](vues-templates/fonctionnalites-de-twig/variables.md)
+  * [Héritage et inclusion](vues-templates/fonctionnalites-de-twig/heritage-et-inclusion.md)
 
 ## Database
 
