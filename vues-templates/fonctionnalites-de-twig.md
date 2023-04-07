@@ -90,17 +90,50 @@ Dans TWIG la seule boucle exploitable est le `for` on peut dire qu'elle est l'é
 ```
 {% endcode %}
 
-
-
 ### Héritage et inclusion
 
 Avec TWIG il est possible d'user du concept d'héritage ; cela permet d'éviter les répétitions de code et donc d'alléger notre projet. Le concept d'héritage de TWIG est sensiblement similaire à celui de PHP, on définit un template parent à partir duquel d'autres template peuvent s'étendre. Les templates enfants peuvent alors substituer des parties du template parent avec le code qui leur est propre.
 
 Pour des applications relativement complexes, il est recommandé de suivre la logique suivante :&#x20;
 
-* Le template `base.html.twig` va contenir les éléments essentiels à l'ensemble des templates de notre application. On y trouvera entre autres `head`, `header`, `body`, `footer`. Ces éléments seront définis dans ce qu'on appelle des `block`.
+* Le template `base.html.twig` va contenir les éléments essentiels à l'ensemble des templates de notre application. On y trouvera entre autres `head`, `header`, `body`, `footer`. Ces éléments seront définis dans ce qu'on appelle des <mark style="color:yellow;">**`block`**</mark>.
 
-On appelle le template parent en utilisant la logique `extends` de la manière suivante :&#x20;
+Le template `base.html.twig` pourrait par exemple ressembler à ça :&#x20;
+
+```twig
+{# templates/base.html.twig #}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{% raw %}
+{% block title %}Welcome!{% endblock %}</title>
+        
+    {% block stylesheets %}
+        <link rel="stylesheet" type="text/css" href="/css/base.css"/>
+    {% endblock %}
+</head>
+<body>
+    <header>
+        {% block header %}
+        {% endblock %}
+    </header>
+
+    {% block body %}
+    {% endblock %}
+
+    <footer>
+        {% block footer %}
+        {% endblock %}    
+    </footer>
+
+    {% block javascripts %}
+        <script src="main.js"></script>
+    {% endblock %}
+{% endraw %}
+</body>
+</html>
+```
 
 ```twig
 {% raw %}
@@ -108,7 +141,7 @@ On appelle le template parent en utilisant la logique `extends` de la manière s
 {% endraw %}
 ```
 
-Dans le template parent, on va définir des `block`&#x20;
+
 
 ### Filtres
 
