@@ -2,6 +2,13 @@
 
 ### Conditions nécessaires
 
+{% hint style="danger" %}
+**L'ensemble de ce document est rédigé dans le contexte d'une utilisation d'un système Linux.** \
+Si vous voulez faire tourner Symfony sur Windows ou MacOS par l'intermédiaire de WAMP, XAMP ou MAMP je vous conseille plutôt d'installer [**WSL**](https://learn.microsoft.com/fr-fr/windows/wsl/install) (pour Windows) ou [**Multipass**](https://multipass.run) (pour MacOS) pour disposer d'un sous-système Linux dans lequel vous pourrez travailler plus simplement avec Symfony.
+
+L'utilisation de [**Docker**](https://www.docker.com) est également une solution viable qui prend tout son intérêt si vous devez cumuler les projets Symfony. Cette option n'est pas documentée ici pour le moment mais vous pouvez trouver toutes les informations [ici](https://symfony.com/doc/current/setup/docker.html).
+{% endhint %}
+
 * Installer [Composer ](https://getcomposer.org/download/)
 * Disposer de PHP 8.1 ou une version supérieure et ces extensions :  [Ctype](https://www.php.net/book.ctype), [iconv](https://www.php.net/book.iconv), [PCRE](https://www.php.net/book.pcre), [Session](https://www.php.net/book.session), [SimpleXML](https://www.php.net/book.simplexml), [Tokenizer ](https://www.php.net/book.tokenizer)  =>  (installables en utilisant Composer)
 * Facultatif  =>  Installer Symfony CLI qui permet d'utiliser la commande `symfony` qui fournit tous les outils nécessaires au développement d'un projet en local. Une fois Symfony CLI installé, vous pouvez vérifier que vous avez rempli toutes les conditions en utilisant cette commande :&#x20;

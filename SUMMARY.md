@@ -25,10 +25,12 @@
 ## Vues - Templates
 
 * [Introduction](vues/wip.md)
-* [Fonctionnalités de TWIG](vues-templates/fonctionnalites-de-twig/README.md)
-  * [Logique](vues-templates/fonctionnalites-de-twig/logique.md)
+* [Fonctionnalités de TWIG](vues-templates/fonctionnalites-de-twig.md)
   * [Variables](vues-templates/fonctionnalites-de-twig/variables.md)
+  * [Logique](vues-templates/fonctionnalites-de-twig/logique.md)
   * [Héritage et inclusion](vues-templates/fonctionnalites-de-twig/heritage-et-inclusion.md)
+  * [Filtres](vues-templates/fonctionnalites-de-twig/filtres.md)
+  * [Assets](vues-templates/fonctionnalites-de-twig/assets.md)
 
 ## Database
 
@@ -45,3 +47,11 @@
 ## STIMULUS
 
 * [WIP](stimulus/wip.md)
+
+## Bundles
+
+* [Webpack-Encore](bundles/webpack-encore.md)
+
+***
+
+* [Ressources](ressources.md)
