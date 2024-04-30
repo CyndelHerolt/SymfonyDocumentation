@@ -4,7 +4,7 @@
 
 {% hint style="danger" %}
 **L'ensemble de ce document est rédigé dans le contexte d'une utilisation d'un système Linux.** \
-Si vous voulez faire tourner Symfony sur Windows ou MacOS par l'intermédiaire de WAMP, XAMP ou MAMP je vous conseille plutôt d'installer [**WSL**](https://learn.microsoft.com/fr-fr/windows/wsl/install) (pour Windows) ou [**Multipass**](https://multipass.run) (pour MacOS) pour disposer d'un sous-système Linux dans lequel vous pourrez travailler plus simplement avec Symfony.
+Si vous voulez faire tourner Symfony sur Windows ou MacOS par l'intermédiaire de WAMP, XAMP ou MAMP je vous conseille plutôt d'installer [**WSL**](https://learn.microsoft.com/fr-fr/windows/wsl/install) ou [**Multipass**](https://multipass.run) pour disposer d'un sous-système Linux dans lequel vous pourrez travailler plus simplement avec Symfony.
 
 L'utilisation de [**Docker**](https://www.docker.com) est également une solution viable qui prend tout son intérêt si vous devez cumuler les projets Symfony. Cette option n'est pas documentée ici pour le moment mais vous pouvez trouver toutes les informations [ici](https://symfony.com/doc/current/setup/docker.html).
 {% endhint %}
