@@ -33,5 +33,3 @@ Il est possible d'utiliser entre autres les composants suivants :
 Organisé selon le modèle de la Programmation Orientée Objet (POO), Symfony dispose de Class prédéfinies. Ces Class seront dérivées et étendues par héritage selon les besoins spécifiques à chaque logiciel qui utilise le framework.\
 Elles peuvent être complétées en fonction de besoins spécifiques grace à la notion d'héritage de la POO : \
 Créer de nouvelles Class héritières des Class prédéfinies permet d'exploiter toutes les fonctionnalités que met en place le framework en plus de celles créés spécialement pour l'application.
-
-###

@@ -35,6 +35,7 @@
 ## Database
 
 * [Introduction](modeles/page-2.md)
+* [Les Entités](database/les-entites.md)
 
 ## Formulaire
 
