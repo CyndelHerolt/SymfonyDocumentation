@@ -48,6 +48,10 @@
 
 * [WIP](evenements/wip.md)
 
+## Composants
+
+* [Introduction](composants/introduction.md)
+
 ## SymfonyUX
 
 * [WIP](symfonyux/wip.md)

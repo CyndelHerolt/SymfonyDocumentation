@@ -61,3 +61,10 @@ Une simple ligne de code permet alors de récupérer tous les assets à partir d
 </html>
 ```
 {% endcode %}
+
+### Avec AssetMapper
+
+{% hint style="warning" %}
+AssetMapper n'est disponible qu'à partir de la version 7 de Symfony
+{% endhint %}
+
