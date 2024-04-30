@@ -98,3 +98,35 @@ Si vous n'avez pas Symfony Flex, il vous faudra créer et configurer ces fichier
 #### Importmap
 
 AssetMapper introduit une fonctionnalité puissante appelée l'<mark style="color:yellow;">**importmap**</mark>. Cette fonctionnalité permet de définir des relations entre les différents fichiers d'assets, facilitant ainsi leur gestion et leur chargement. Par exemple, vous pouvez définir des dépendances entre vos fichiers JavaScript, spécifiant qu'un fichier dépend d'un autre.
+
+La config est définie dans un fichier PHP qui déclare les relations entre les fichiers d'assets dans votre application. Lorsque vous importez un fichier d'asset (par exemple, un fichier JavaScript) dans votre application, le navigateur consulte l'importmap pour déterminer où trouver les dépendances de ce fichier. AssetMapper s'occupe alors de générer les URLs appropriées pour ces dépendances, en tenant compte de la configuration que vous avez définie.
+
+Par exemple, si un fichier JavaScript importe un autre fichier avec un chemin relatif, AssetMapper ajoutera automatiquement un mapping vers le fichier correctement versionné, garantissant ainsi que toutes les dépendances sont correctement chargées.
+
+Voici un exemple du fichier `importmap.php` :&#x20;
+
+{% code overflow="wrap" %}
+```php
+<?php
+// Dans cet exemple, les fichiers module1.js et module2.js sont des fichiers importés dans le fichier main.js.
+return [
+    'imports' => [
+        'app' => [
+            'js/main.js' => [
+                'js/module1.js',
+                'js/module2.js'
+            ]
+        ]
+    ]
+];
+```
+{% endcode %}
+
+{% hint style="warning" %}
+Evidemment, vous n'avez pas à éditer manuellement ce fichier après chaque modification, la compilation des assets front va permettre de tout mettre à jour.
+{% endhint %}
+
+```bash
+# commande pour compiler les assets sans utiliser WebpackEncore
+bin/console assets:install
+```
