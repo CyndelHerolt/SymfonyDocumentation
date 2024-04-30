@@ -42,6 +42,10 @@ Dans le command prompt, placez vous dans le dossier où vous souhaitez créer vo
 
 _la commande va créer un dossier contenant les fichiers nécessaires au fonctionnement de symfony, c'est dans ce dossier que vous travaillerez. Vous pouvez donc par exemple l'executer dans le dossier /var/www/html et vous obtiendrez /var/www/html/le\_projet._&#x20;
 
+Dans votre projet, vous trouverez un fichier `.env`. Ce fichier est destiné à stocker des variables d'environnement spécifiques à votre environnement de développement. Petite spécificité, dans le `.env` vous ne stockez pas directement les données mais simplement une structure des données nécessaires au fonctionnement de votre application. Ce dernier sera alors disponible dans votre système de controle de version (GitHub).&#x20;
+
+Il faut par conséquent créer un second fichier `.env.local` qui est en fait une copie de votre `.env` mais dans lequel vous allez saisir les données réelles. Votre application prendra automatiquement en compte le fichier `.env.local` en priorité.
+
 ### Travailler sur une application Symfony déjà existante
 
 Si vous devez travailler sur une application Symfony créée par d'autres développeurs, vous devez simplement récupérer les fichiers du projet et installer les différentes dépendance en utilisant Composer.

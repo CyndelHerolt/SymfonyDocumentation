@@ -34,7 +34,7 @@
 
 ## Database
 
-* [WIP](modeles/page-2.md)
+* [Introduction](modeles/page-2.md)
 
 ## Formulaire
 
