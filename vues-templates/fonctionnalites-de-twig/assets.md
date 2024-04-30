@@ -4,7 +4,7 @@ description: Gestion simplifiée des URL internes des imports média, fichiers c
 
 # Assets
 
-### La version "classique"
+### Avec Symfony Asset
 
 Symfony propose un bundle permettant une gestion simplifiée des imports média, fichiers css et js. L'ajout de ce bundle à un projet se fait de la manière suivante :&#x20;
 
@@ -68,3 +68,33 @@ Une simple ligne de code permet alors de récupérer tous les assets à partir d
 AssetMapper n'est disponible qu'à partir de la version 7 de Symfony
 {% endhint %}
 
+AssetMapper c'est la version améliorée de Symfony Asset, c'est un outil plus spécifique qui peut être utilisé pour gérer les dépendances des assets dans Symfony et pour générer des URLs vers ces assets de manière optimisée, en prenant en charge des fonctionnalités telles que la versioning des fichiers, la compression, etc.
+
+Pour ajouter le composant au projet :&#x20;
+
+```bash
+composer require symfony/asset-mapper
+```
+
+Si vous avez Symfony Flex d'installé dans votre appli, tous les fichiers nécessaires ont été automatiquement créés et configurés.
+
+* `assets/app.js` Votre point d'entrée javascript
+* `assets/styles/app.css` Votre point d'entrée css
+* `config/packages/asset_mapper.yaml` Le fichier où sont définis les chemins de vos assets
+* `importmap.php` Le fichier de configuration d'importmap
+
+Le fichier `base.html.twig` a également été mis à jour de la manière suivante :&#x20;
+
+```
+{% raw %}
+{% block javascripts %}
++    {% block importmap %}{{ importmap('app') }}{% endblock %}
+{% endblock %}
+{% endraw %}
+```
+
+Si vous n'avez pas Symfony Flex, il vous faudra créer et configurer ces fichiers manuellement. Vous trouverez le contenu précis des fichiers [ici](https://github.com/symfony/recipes/tree/main/symfony/asset-mapper).
+
+#### Importmap
+
+AssetMapper introduit une fonctionnalité puissante appelée l'<mark style="color:yellow;">**importmap**</mark>. Cette fonctionnalité permet de définir des relations entre les différents fichiers d'assets, facilitant ainsi leur gestion et leur chargement. Par exemple, vous pouvez définir des dépendances entre vos fichiers JavaScript, spécifiant qu'un fichier dépend d'un autre.
